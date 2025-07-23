@@ -5,7 +5,7 @@ class FruitsController < ApplicationController
   end
 
   def detail
-    @fruit = "Orange"
+    @fruit = params[:fruit]
     respond_to(&:turbo_stream)
   end
 end

@@ -10,6 +10,8 @@ module Learnruby
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
+    config.hosts << "3000-firebase-learnruby-1752681238469.cluster-fnjdffmttjhy2qqdugh3yehhs2.cloudworkstations.dev"
+    config.hosts << "9000-firebase-learnruby-1752681238469.cluster-fnjdffmttjhy2qqdugh3yehhs2.cloudworkstations.dev"
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.

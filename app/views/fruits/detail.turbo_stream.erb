@@ -1,6 +1,18 @@
 <%= turbo_stream.update "fruits-square" do %>
-  <div class="square themed red">
-    <h3><%= @fruit %>Orange</h3>
-    <p>A juicy citrus fruit packed with vitamin C.</p>
+  <div class="square themed yellow">
+    <h3><%= @fruit %></h3>
+    <% case @fruit %>
+    <% when "Oranges" %>
+      <p>A juicy citrus fruit packed with vitamin C.</p>
+    <% when "Bananas" %>
+      <p>Rich in potassium and a great source of energy.</p>
+    <% when "Apples" %>
+      <p>A crisp and sweet fruit, perfect for snacking.</p>
+    <% else %>
+      <p>Details for this fruit coming soon...</p>
+    <% end %>
   </div>
+<% end %>
+<%= turbo_stream.update "fruit-link" do %>
+  <%= @fruit %>
 <% end %>

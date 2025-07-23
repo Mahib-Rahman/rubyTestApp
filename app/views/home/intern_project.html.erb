@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag 'intern_project', media: 'all', 'data-turbo-track': 'reload' %>
 
 
-<h1>Intern Project</h1>
+<h1>Intern Project turbo_stream</h1>
 
 <div class="control-bar">
   <div class="section">
     <%= link_to 'Fruits', fruits_list_path, data: { turbo_stream: true } %>
-    <%= link_to 'Orange', fruits_detail_path, data: { turbo_stream: true } %>
+    <span id="fruit-link">Orange</span>
   </div>
   <div class="section">
     <%= link_to 'Vegetables', vegetables_list_path, data: { turbo_stream: true } %>

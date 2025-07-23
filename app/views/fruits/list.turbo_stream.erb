@@ -1,9 +1,9 @@
 <%= turbo_stream.update "fruits-square" do %>
-  <div class="square themed red">
+  <div class="square themed yellow">
     <h3>Fruits</h3>
     <ul>
       <% @fruits.each do |fruit| %>
-        <li><%= fruit %></li>
+        <li><%= link_to fruit, fruits_detail_path(fruit: fruit), data: { turbo_stream: true } %></li>
       <% end %>
     </ul>
   </div>
