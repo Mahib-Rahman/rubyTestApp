@@ -2,6 +2,24 @@ Rails.application.routes.draw do
   # get "home/index"
   root "home#index"
   get "home/about"
+  get "intern_project" => "home#intern_project"
+
+
+
+  get 'fruits_list' => "fruits#list"
+  get 'fruits_detail' => "fruits#detail"
+
+  get 'vegetables_list' => "vegetables#list"
+  get 'vegetables_detail' => "vegetables#detail"
+
+  get 'proteins_list' => "proteins#list"
+  get 'proteins_detail' => "proteins#detail"
+
+  get 'drinks_list' => "drinks#list"
+  get 'drinks_detail' => "drinks#detail"
+
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

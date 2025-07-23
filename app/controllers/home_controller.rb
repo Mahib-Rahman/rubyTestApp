@@ -3,4 +3,6 @@ class HomeController < ApplicationController
   end
   def about
   end
+  def intern_project
+  end
 end

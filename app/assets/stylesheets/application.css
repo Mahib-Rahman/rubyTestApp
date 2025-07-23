@@ -8,3 +8,67 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+nav ul {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Make footer stick to bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  /* Optional: style your header */
+  background: #f8f8f8;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.control-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.section {
+  display: flex;
+  gap: 0.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.square {
+  min-height: 200px;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.themed.red { background: #ffe6e6; }
+.themed.green { background: #e6ffe6; }
+.themed.yellow { background: #fffacc; }
+.themed.blue { background: #e6f0ff; }

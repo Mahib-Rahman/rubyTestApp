@@ -26,13 +26,23 @@
     <header>
       <nav>
         <ul>
-          <li>link_to "Home"</li>
+          <li><%= link_to "Home", root_path %></li>
+        </ul>
+        <ul>
+          <li><%= link_to "About Page", home_about_path %></li>
+        </ul>
+        <ul>
+          <li><%= link_to "Intern Project", intern_project_path %></li>
         </ul>
       </nav>
     </header>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+    
     <footer>
       <p>Footer</p>
     </footer>
+
   </body>
 </html>

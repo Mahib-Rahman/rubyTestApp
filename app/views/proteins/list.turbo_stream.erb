@@ -1,0 +1,10 @@
+<%= turbo_stream.update "proteins-square" do %>
+  <div class="square themed red">
+    <h3>Proteins</h3>
+    <ul>
+      <% @proteins.each do |protein| %>
+        <li><%= protein %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
