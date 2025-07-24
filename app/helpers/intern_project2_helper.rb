@@ -1,0 +1,2 @@
+module InternProject2Helper
+end

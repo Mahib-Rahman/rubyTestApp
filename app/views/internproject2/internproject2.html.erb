@@ -1,0 +1,26 @@
+<h1>Intern Project2 turbo frames and stimulus</h1>
+<div class="control-bar" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+  <div>
+    <button data-action="click->loader#load" data-loader-target="button" data-loader-url="/internproject2/fruits_list">Fruits List</button>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/fruits_detail/1">Fruit Detail</button>
+  </div>
+  <div>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/vegetables">Vegetables List</button>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/vegetables/1">Vegetable Detail</button>
+  </div>
+  <div>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/proteins">Proteins List</button>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/proteins/1">Protein Detail</button>
+  </div>
+  <div>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/drinks">Drinks List</button>
+    <button data-action="click->loader#load" data-loader-url="/internproject2/drinks/1">Drink Detail</button>
+  </div>
+</div>
+
+<div class="grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+  <turbo-frame id="square_fruits" src="<%= internproject2_fruits_list_path %>"></turbo-frame>
+  <turbo-frame id="square_vegetables" src="/internproject2/vegetables"></turbo-frame>
+  <turbo-frame id="square_proteins" src="/internproject2/proteins"></turbo-frame>
+  <turbo-frame id="square_drinks" src="/internproject2/drinks"></turbo-frame>
+</div>

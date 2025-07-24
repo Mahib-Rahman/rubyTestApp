@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'intern_project', media: 'all', 'data-turbo-track': 'reload' %>
+
+
+<h1>Intern Project turbo_stream</h1>
+
+<div class="control-bar">
+  <div class="section">
+    <%= link_to 'Fruits', internproject_fruits_list_path, data: { turbo_stream: true } %>
+    <span id="fruit-link">Orange</span>
+  </div>
+  <div class="section">
+    <%= link_to 'Vegetables', internproject_vegetables_list_path, data: { turbo_stream: true } %>
+    <%= link_to 'Lettuce', internproject_vegetables_detail_path, data: { turbo_stream: true } %>
+  </div>
+  <div class="section">
+    <%= link_to 'Proteins', internproject_proteins_list_path, data: { turbo_stream: true } %>
+    <%= link_to 'Steak', internproject_proteins_detail_path, data: { turbo_stream: true } %>
+  </div>
+  <div class="section">
+    <%= link_to 'Drinks', internproject_drinks_list_path, data: { turbo_stream: true } %>
+    <%= link_to 'Smoothie', internproject_drinks_detail_path, data: { turbo_stream: true } %>
+  </div>
+</div>
+
+<div class="grid">
+  <div id="fruits-square" class="square"></div>
+  <div id="vegetables-square" class="square"></div>
+  <div id="proteins-square" class="square"></div>
+  <div id="drinks-square" class="square"></div>
+</div>

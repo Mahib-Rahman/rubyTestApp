@@ -1,22 +1,40 @@
 Rails.application.routes.draw do
+  
   # get "home/index"
   root "home#index"
   get "home/about"
-  get "intern_project" => "home#intern_project"
+  get "internproject" => "internproject#internproject"
+  
+  get 'internproject2' => "internproject2#internproject2"
 
+  namespace :internproject do
+    get 'fruits_list' => "fruits#list"
+    get 'fruits_detail' => "fruits#detail"
+    
+    get 'vegetables_list' => "vegetables#list"
+    get 'vegetables_detail' => "vegetables#detail"
 
+    get 'proteins_list' => "proteins#list"
+    get 'proteins_detail' => "proteins#detail"
 
-  get 'fruits_list' => "fruits#list"
-  get 'fruits_detail' => "fruits#detail"
+    get 'drinks_list' => "drinks#list"
+    get 'drinks_detail' => "drinks#detail"
+  end
 
-  get 'vegetables_list' => "vegetables#list"
-  get 'vegetables_detail' => "vegetables#detail"
+  namespace :internproject2 do
+    get 'fruits_list' => "fruits#list"
+    get 'fruits_detail' => "fruits#detail"
+    
+    get 'vegetables_list' => "vegetables#list"
+    get 'vegetables_detail' => "vegetables#detail"
 
-  get 'proteins_list' => "proteins#list"
-  get 'proteins_detail' => "proteins#detail"
+    get 'proteins_list' => "proteins#list"
+    get 'proteins_detail' => "proteins#detail"
 
-  get 'drinks_list' => "drinks#list"
-  get 'drinks_detail' => "drinks#detail"
+    get 'drinks_list' => "drinks#list"
+    get 'drinks_detail' => "drinks#detail"
+  end
+  
 
 
 

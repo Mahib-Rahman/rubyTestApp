@@ -3,7 +3,7 @@
     <h3>Fruits</h3>
     <ul>
       <% @fruits.each do |fruit| %>
-        <li><%= link_to fruit, fruits_detail_path(fruit: fruit), data: { turbo_stream: true } %></li>
+        <li><%= link_to fruit, internproject_fruits_detail_path(fruit: fruit), data: { turbo_stream: true } %></li>
       <% end %>
     </ul>
   </div>
