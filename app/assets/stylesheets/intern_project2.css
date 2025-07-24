@@ -1,0 +1,110 @@
+.page-container {
+    max-width: 1200px;
+    margin: auto;
+}
+  
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a5568;
+}
+  
+  /* Control Bar Styles */
+.control-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+  
+.control-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+  
+.control-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+  
+.control-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Control Bar Theme Colors */
+  .fruits-controls { background-color: #ffebee; }
+  .vegetables-controls { background-color: #e8f5e9; }
+  .proteins-controls { background-color: #fffde7; }
+  .drinks-controls { background-color: #e3f2fd; }
+  
+  /* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+  
+  /* Content Card Styles */
+.content-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    min-height: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+  
+.content-card h3 {
+    margin-top: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+  
+.content-card h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+  
+.content-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+  
+.content-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+  
+.content-card li {
+    margin-bottom: 0.5rem;
+}
+  
+  /* Card Theme Colors */
+  .fruits-card { background-color: #ffebee; border: 1px solid #ffcdd2; }
+  .vegetables-card { background-color: #e8f5e9; border: 1px solid #c8e6c9; }
+  .proteins-card { background-color: #fffde7; border: 1px solid #fff9c4; }
+  .drinks-card { background-color: #e3f2fd; border: 1px solid #bbdefb; }
+  
+  /* Responsive Grid */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .control-bar {
+        flex-direction: column;
+    }
+  }

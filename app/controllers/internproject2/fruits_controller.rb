@@ -1,11 +1,11 @@
 module Internproject2
   class FruitsController < ApplicationController
     def list
-      @fruits = %w[Apple Banana Cherry Durian Elderberry Fig Grape Honeydew]
+      @fruits = ['Apples', 'Bananas', 'Oranges', 'Strawberries', 'Blueberries', 'Mangos', 'Pineapples', 'Peaches']
     end
   
     def detail
-      @fruit = "Fruit ##{params[:id]}"
+      @fruit = { name: "Orange", description: "A sweet, round citrus fruit packed with vitamin C." }
     end
   end
 end

@@ -1,16 +1,12 @@
 module Internproject2
   class ProteinsController < ApplicationController
-    def list
-      @proteins = %w[Chicken Beef Tofu Lentils Eggs]
-      respond_to do |format|
-        format.turbo_stream
+    class Internproject2::ProteinsController < ApplicationController
+      def list
+        @proteins = ['Chicken Breast', 'Salmon', 'Tofu', 'Eggs', 'Lentils', 'Greek Yogurt', 'Quinoa', 'Almonds']
       end
-    end
-
-    def detail
-      @protein = "Chicken"
-      respond_to do |format|
-        format.turbo_stream
+    
+      def detail
+        @protein = { name: "Steak", description: "A perfectly cooked ribeye with 30g of protein per serving." }
       end
     end
   end

@@ -1,26 +1,30 @@
+<%= stylesheet_link_tag "intern_project2", "data-turbo-track": "reload" %>
 <h1>Intern Project2 turbo frames and stimulus</h1>
-<div class="control-bar" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-  <div>
-    <button data-action="click->loader#load" data-loader-target="button" data-loader-url="/internproject2/fruits_list">Fruits List</button>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/fruits_detail/1">Fruit Detail</button>
+<div class="page-container">
+  <div class="control-bar">
+    <div class="control-section fruits-controls">
+      <%= link_to "Fruits", internproject2_fruits_list_path, class: "control-button", data: { turbo_frame: "fruits_square" } %>
+      <%= link_to "Orange", internproject2_fruits_detail_path(1), class: "control-button", data: { turbo_frame: "fruits_square" } %>
+    </div>
+    <div class="control-section vegetables-controls">
+      <%= link_to "Vegetables", internproject2_vegetables_list_path, class: "control-button", data: { turbo_frame: "vegetables_square" } %>
+      <%= link_to "Lettuce", internproject2_vegetables_detail_path(1), class: "control-button", data: { turbo_frame: "vegetables_square" } %>
+    </div>
+    <div class="control-section proteins-controls">
+      <%= link_to "Proteins", internproject2_proteins_list_path, class: "control-button", data: { turbo_frame: "proteins_square" } %>
+      <%= link_to "Steak", internproject2_proteins_detail_path(1), class: "control-button", data: { turbo_frame: "proteins_square" } %>
+    </div>
+    <div class="control-section drinks-controls">
+      <%= link_to "Drinks", internproject2_drinks_list_path, class: "control-button", data: { turbo_frame: "drinks_square" } %>
+      <%= link_to "Smoothie", internproject2_drinks_detail_path(1), class: "control-button", data: { turbo_frame: "drinks_square" } %>
+    </div>
   </div>
-  <div>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/vegetables">Vegetables List</button>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/vegetables/1">Vegetable Detail</button>
-  </div>
-  <div>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/proteins">Proteins List</button>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/proteins/1">Protein Detail</button>
-  </div>
-  <div>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/drinks">Drinks List</button>
-    <button data-action="click->loader#load" data-loader-url="/internproject2/drinks/1">Drink Detail</button>
-  </div>
-</div>
 
-<div class="grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-  <turbo-frame id="square_fruits" src="<%= internproject2_fruits_list_path %>"></turbo-frame>
-  <turbo-frame id="square_vegetables" src="/internproject2/vegetables"></turbo-frame>
-  <turbo-frame id="square_proteins" src="/internproject2/proteins"></turbo-frame>
-  <turbo-frame id="square_drinks" src="/internproject2/drinks"></turbo-frame>
+  <div class="grid-container">
+    <%# Each turbo_frame_tag loads initial content from the 'src' path %>
+    <%= turbo_frame_tag "fruits_square", src: internproject2_fruits_list_path %>
+    <%= turbo_frame_tag "vegetables_square", src: internproject2_vegetables_list_path %>
+    <%= turbo_frame_tag "proteins_square", src: internproject2_proteins_list_path %>
+    <%= turbo_frame_tag "drinks_square", src: internproject2_drinks_list_path %> 
+  </div>
 </div>

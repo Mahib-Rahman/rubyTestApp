@@ -1,2 +1,7 @@
-<h3>Fruit Detail</h3>
-<p>This is a detailed view of a fruit (ID: <%= params[:id] %>).</p>
+<%= turbo_frame_tag "proteins_square" do %>
+  <div class="content-card proteins-card">
+    <h3>Proteins 🍖</h3>
+    <h4><%= @protein[:name] %></h4>
+    <p><%= @protein[:description] %></p>
+  </div>
+<% end %>

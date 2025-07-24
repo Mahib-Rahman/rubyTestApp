@@ -1,11 +1,10 @@
-<h3>Fruits List</h3>
-<ul>
-  <li>Apple</li>
-  <li>Banana</li>
-  <li>Cherry</li>
-  <li>Durian</li>
-  <li>Elderberry</li>
-  <li>Fig</li>
-  <li>Grape</li>
-  <li>Honeydew</li>
-</ul>
+<%= turbo_frame_tag "vegetables_square" do %>
+  <div class="content-card vegetables-card">
+    <h3>Vegetables</h3>
+    <ul>
+      <% @vegetables.each do |veg| %>
+        <li><%= veg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,16 +1,12 @@
 module Internproject2
   class VegetablesController < ApplicationController
-    def list
-      @vegetables = %w[Carrots Broccoli Spinach Kale Lettuce]
-      respond_to do |format|
-        format.turbo_stream
+    class Internproject2::VegetablesController < ApplicationController
+      def list
+        @vegetables = ['Carrots', 'Broccoli', 'Spinach', 'Bell Peppers', 'Tomatoes', 'Cucumbers', 'Onions', 'Potatoes']
       end
-    end
-
-    def detail
-      @vegetable = "Lettuce"
-      respond_to do |format|
-        format.turbo_stream
+    
+      def detail
+        @vegetable = { name: "Lettuce", description: "Crisp leaves, perfect for salads and sandwiches." }
       end
     end
   end

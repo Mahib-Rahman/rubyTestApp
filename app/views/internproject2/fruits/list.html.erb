@@ -1,9 +1,10 @@
-<p>hi</p>
-<turbo-frame id="square_fruits">
-  <h2>Fruits</h2>
-  <ul>
-    <% @fruits.each do |fruit| %>
-      <li><%= fruit %></li>
-    <% end %>
-  </ul>
-</turbo-frame>
+<%= turbo_frame_tag "fruits_square" do %>
+  <div class="content-card fruits-card">
+    <h3>Fruits</h3>
+    <ul>
+      <% @fruits.each do |fruit| %>
+        <li><%= fruit %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

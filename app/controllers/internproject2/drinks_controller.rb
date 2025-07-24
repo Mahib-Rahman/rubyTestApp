@@ -1,16 +1,12 @@
 module Internproject2
   class DrinksController < ApplicationController
-    def list
-      @drinks = %w[Coke Pepsi Sprite Fanta MountainDew]
-      respond_to do |format|
-        format.turbo_stream
+    class Internproject2::DrinksController < ApplicationController
+      def list
+        @drinks = ['Water', 'Coffee', 'Tea', 'Orange Juice', 'Milk', 'Green Tea', 'Iced Coffee', 'Lemonade']
       end
-    end
-
-    def detail
-      @drink = "Coke"
-      respond_to do |format|
-        format.turbo_stream
+    
+      def detail
+        @drink = { name: "Smoothie", description: "Fresh mixed berries blended with yogurt and honey." }
       end
     end
   end
